@@ -1,0 +1,207 @@
+
+
+> in JS strings are immutables .ie., name = "Sam", n[0] = "P" is not allowed.
+> the arrow function gets  the 'this' keyword from the parent where it is defined 
+> closures in javasctipt means that a function has acces to any variables that is within the scope in which it is defined in.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+SETTING AND RETRIEVING DATA-ID 
+<div id='strawberry-plant' data-fruit='12'></div>
+
+<script>
+// 'Getting' data-attributes using getAttribute
+var plant = document.getElementById('strawberry-plant');
+var fruitCount = plant.getAttribute('data-fruit'); // fruitCount = '12'
+
+// 'Setting' data-attributes using setAttribute
+plant.setAttribute('data-fruit','7'); // Pesky birds
+</script>
+
+
+
+
+		OR
+
+<div id="my-div" data-info="some info here" data-other-info="more info here">My Awesome Div</div>
+var myDiv = document.querySelector('#my-div');
+myDiv.dataset.info // "some info here"
+myDiv.dataset.otherInfo // "more info here"
+
+///////////////
+
+
+/////////////////
+
+in JSON the keys have to be string and the values can be string but it is not mandatory
+////////////////
+{
+        // if we have projects then do the map thing else dont do the map thing, we nca use this technique with map
+        projects && projects.map(project => {
+          return <ProjectSummary project={project} />;
+       })
+}  
+
+//////////////////////////
+the issues that an ai has to deal with, is a task and which available object can be used to achieve that task and also what task/functions the available objects can achieve(i.e its use)
+/////////////////////////
+lightbox, venobox, owlcarousel, isotope, aoc, wow, animate, jquery, scroll reveal
+////////////////////////
+what is functional and procedural programming
+////////////////////////
+//
+//
+//
+// dects window scroll
+window.addEventListener('scroll', evt => {
+  //  console.log(window.pageYOffset); // scroll offset from top
+  // console.log(text.offsetTop); // offest of parent of text from top
+  scrollOffset = window.pageYOffset;
+  let viewPortWidth = window.innerWidth;
+  let viewPortHeight = window.innerHeight; // gives the view port height
+  // console.log(`${viewPortHeight}, width = ${viewPortWidth}`);
+  // this.console.log(viewPortHeight);
+  // this.console.log(scrollOffset);
+  if (scrollOffset > 100) {
+    console.log('scrolled');
+  }
+});
+//
+//
+//
+
+>Object.assign(dest, src1, ..., srcN) – copies properties from src1..N into dest
+>Array.from operates on both array-likes and iterables.
+>The spread operator operates only on iterables.
+>In JavaScript, functions are objects.We can treat a function as an object, store properties in it, but that has no effect on its execution. Variables are not function properties and vice versa. These are just parallel worlds.
+>Global object:In a browser it is named window, for Node.js it is global
+>Recently, globalThis was added to the language, as a standardized name for a global object
+>In JavaScript, objects have a special hidden property [[Prototype]] (as named in the specification), that is either null or references another object. That object is called “a prototype
+>Polyfilling is a term for making a substitute for a method that exists in the JavaScript specification, but is not yet supported by a particular JavaScript engine.
+
+>Never!! store JWT in localStorage instead store in HTTP only cookies, XSS Attacks, DOS Attacks, NOSQL Query Injection
+>animation: name duration timing-function delay iteration-count direction fill-mode;
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ res.cookie('jwt', token, {
+    expires: new Date(
+      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+    ),
+    secure: true,
+    httpOnly: true
+  });
+
+<><><><><>><><><><><><><><>><><><><>><><><><>><><><>
+ease - Specifies an animation with a slow start, then fast, then end slowly (this is default)
+linear - Specifies an animation with the same speed from start to end
+ease-in - Specifies an animation with a slow start
+ease-out - Specifies an animation with a slow end
+ease-in-out - Specifies an animation with a slow start and end
+
+---------------------------------------------------------------------------------------------------------------------------------
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+					DATES
+
+
+There’s a special method Date.now() that returns the current timestamp.
+
+It is semantically equivalent to new Date().getTime(), but it doesn’t create an intermediate Date object. So it’s faster and doesn’t put pressure on garbage collection.
+//
+// program to get the date some days  ago
+let getDateAgo=(date, days)=>{
+  let providedTimestamp = date.getTime();  // get the time stamp of current date
+  let providedTimestampB = providedTimestamp-days*24*60*60*1000; // substract from curretent time stamp the difference in milliseconds
+  let newDate = new Date(providedTimestampB); // create a new date with the new timestamp
+  console.log(newDate.toString()); // print the date
+  return date.toString(); 
+}
+
+let date = new Date();
+console.log(getDateAgo(date,10));
+//end
+////////////////////////////////
+//more date programs
+
+
+// some useful front end js libraries
+1. Anime.js
+2. Howler.js
+3. Chart.js
+4. Reveal.js
+5. Three.js
+6. Pixi.js
+7. Video.js
+
+
+/????????????????????????????????????????????????????????????????????????????????????????????????????????\
+
+	to get full window size use:
+			 console.log(document.body.scrollHeight);
+				OR  
+			 console.log(document.documentElement.scrollHeight);  	
+
+
+	to get the view port size:
+			console.log(document.body.clientHeight);  
+				OR
+			console.log(document.documentElement.clientHeight);  	
+
+??????????????????????????????????????????????????????????????????????????????????????????????????????????
+
+>delete object.propertyName; // to remove an object property
+>justify-items aligns in m-axis case of grid, align-items in y-axis, & justify-content aligns whole content
+>grid-template-columns: repeat(auto-fit/auto-fill,minmax(200px,1fr));
+> .prettierrc{ "singleQuote":true,
+                      "printWidth": 80
+  }
+> Regular Expressions: The Complete Tutorial by Jan Goyvaerts
+
+factory function is a function that returns another function
+
+/*node error response  err.response*/
+ console.log(err.response.data.message);
+due: 52 hrs
+Array.from({length:10},()=>return 1)
+Array.from({length:5},()=>Math.floor(Math.random()*(max + 1 - min) + min))
+Iterables are objects that implement the Symbol.iterator method, as described above.
+Array-likes are objects that have indexes and length, so they look like arrays.(300)(27)
+a call to promise.then returns a promise, so that we can call the next .then on it.
+//run - npm install node-sass.
+
+
+// reversing the linked list
+var reverseKGroup = function (head, k) {
+  let prev, current, nxt;
+  current = head.next;
+  prev = head;
+  prev.next = null;
+  while(current){    
+    nxt = current.next;
+    current.next = prev;
+    prev= current;
+    current = nxt;
+  }
+  console.log(prev); // returning the new head
+};
+
+// make a true copy of an object: gives a shallow copy
+let clone = Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj));	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
